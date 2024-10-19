@@ -6,12 +6,15 @@ github:
 conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
-provider:
-  linux_aarch64: azure
-  linux_ppc64le: azure
-build_platform:
-  linux_aarch64: linux_aarch64
-  linux_ppc64le: linux_ppc64le
 bot:
   abi_migration_branches:
   - qt6
+provider:
+  linux: github_actions
+  osx: github_actions
+  osx_arm64: github_actions
+  win: github_actions
+build_platform:
+  osx_arm64: osx_arm64
+  linux_aarch64: linux_aarch64
+  linux_ppc64le: linux_ppc64le
